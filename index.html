@@ -1,67 +1,110 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
   <title>AI & Business Insights</title>
-  <!-- Google Fonts for a modern look -->
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,600" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Fonts (similar to Editorial’s style) -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700"
+    rel="stylesheet"
+  />
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-<body>
-  <header class="site-header">
-    <div class="container">
-      <h1 class="site-title"><a href="index.html">AI & Business Insights</a></h1>
-      <nav class="site-nav">
+<body class="is-preload">
+
+  <!-- Wrapper (overall page container) -->
+  <div id="page-wrapper">
+
+    <!-- Header -->
+    <header id="header">
+      <h1><a href="index.html">AI & Business Insights</a></h1>
+      <nav>
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html" class="current-page-item">Home</a></li>
           <li><a href="blog.html">Blog</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li>
+            <button id="theme-toggle" class="button small">Toggle Dark/Light</button>
+          </li>
         </ul>
       </nav>
-      <button id="theme-toggle" class="theme-toggle">Toggle Dark/Light</button>
-    </div>
-  </header>
-  
-  <section id="hero" class="hero">
-    <div class="container">
-      <h2>Welcome to AI & Business Insights</h2>
-      <p>Your hub for in-depth AI development insights, tool reviews, and innovative business strategies.</p>
-      <form id="newsletter-signup" class="newsletter-signup" action="#" method="post">
-        <input type="email" placeholder="Your email address" required>
-        <button type="submit">Subscribe</button>
-      </form>
-    </div>
-  </section>
-  
-  <section id="features" class="features">
-    <div class="container">
-      <h3>What We Offer</h3>
-      <div class="feature-items">
-        <div class="feature-item">
-          <h4>AI Blog Posts</h4>
-          <p>In-depth articles on AI development and business adoption.</p>
-        </div>
-        <div class="feature-item">
-          <h4>Voiceflow Chatbot</h4>
-          <p>Interact with our AI-powered assistant for insights and navigation.</p>
-        </div>
-        <div class="feature-item">
-          <h4>Tool Reviews</h4>
-          <p>Detailed reviews of the latest AI tools.</p>
-        </div>
+    </header>
+
+    <!-- Banner / Hero -->
+    <section id="banner">
+      <div class="inner">
+        <h2>Welcome to AI &amp; Business Insights</h2>
+        <p>Your hub for AI development, tool reviews,<br />
+           and innovative business strategies.</p>
+        <form id="newsletter-signup" class="newsletter-signup" action="#" method="post">
+          <input type="email" placeholder="Your email address" required />
+          <button type="submit" class="button primary">Subscribe</button>
+        </form>
       </div>
-    </div>
-  </section>
-  
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2025 AI & Business Insights. All rights reserved.</p>
-    </div>
-  </footer>
-  
-  <!-- JavaScript -->
+    </section>
+
+    <!-- Main Content -->
+    <section id="main" class="container">
+      <section class="box special">
+        <header class="major">
+          <h2>Latest Insights &amp; Articles</h2>
+          <p>Stay updated on the cutting-edge of AI and its<br />
+             adoption across diverse industries.</p>
+        </header>
+      </section>
+
+      <!-- Article Teasers -->
+      <section class="box">
+        <div class="row">
+          <!-- Teaser 1 -->
+          <div class="col-6 col-12-medium">
+            <h3>Understanding Machine Learning Basics</h3>
+            <p>A brief introduction to machine learning concepts and how businesses can leverage them effectively.</p>
+            <a href="post.html" class="button small">Read More</a>
+          </div>
+          <!-- Teaser 2 -->
+          <div class="col-6 col-12-medium">
+            <h3>Top AI Tools for Productivity</h3>
+            <p>Our curated list of powerful AI tools that can help streamline operations and save you time.</p>
+            <a href="post.html" class="button small">Read More</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Another Row of Teasers (optional) -->
+      <section class="box">
+        <div class="row">
+          <div class="col-6 col-12-medium">
+            <h3>Business Case Studies</h3>
+            <p>Explore how leading enterprises are successfully integrating AI to stay ahead in the market.</p>
+            <a href="post.html" class="button small">Read More</a>
+          </div>
+          <div class="col-6 col-12-medium">
+            <h3>AI Ethics &amp; Governance</h3>
+            <p>Dive into responsible AI practices, ensuring transparency, fairness, and accountability.</p>
+            <a href="post.html" class="button small">Read More</a>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <ul class="icons">
+        <li><a href="#" class="icon brands fa-twitter"><span>Twitter</span></a></li>
+        <li><a href="#" class="icon brands fa-linkedin"><span>LinkedIn</span></a></li>
+        <!-- Add more icons as needed -->
+      </ul>
+      <p>&copy; 2025 AI &amp; Business Insights. All rights reserved.</p>
+    </footer>
+
+  </div><!-- End #page-wrapper -->
+
+  <!-- Scripts -->
   <script src="assets/js/script.js"></script>
   <!-- Voiceflow Chatbot Integration (placeholder) -->
   <script src="https://example.com/voiceflow-chatbot.js"></script>
