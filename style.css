@@ -1,0 +1,92 @@
+/* Light Theme Variables */
+:root {
+  --bg-color: #FFFFFF;
+  --text-color: #000000;
+  --accent-orange: #FFA500;
+  --accent-yellow: #FFD700;
+}
+
+/* Dark Theme Variables */
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #FFFFFF;
+  --accent-orange: #FFA500;
+  --accent-yellow: #FFD700;
+}
+
+/* Global Styles */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: var(--accent-orange);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 1rem;
+}
+
+nav ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+button {
+  background-color: var(--accent-yellow);
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+main {
+  padding: 2rem;
+}
+
+#hero {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+#newsletter-signup {
+  margin-top: 1rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: var(--accent-orange);
+  color: var(--text-color);
+}
+
+/* Responsive Navigation */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  nav ul li {
+    margin-bottom: 0.5rem;
+  }
+}
