@@ -1,152 +1,222 @@
-/* Theme Variables */
+/*
+  Adapted from Editorial by HTML5 UP
+  (html5up.net | @ajlkn)
+  Creative Commons Attribution 3.0 License (html5up.net/license)
+*/
+
+/* Variables for Light/Dark Themes */
 :root {
   --bg-color: #ffffff;
   --text-color: #333;
-  --accent-color: #FFA500; /* Orange */
+  --accent-color: #FFA500;    /* Orange */
   --highlight-color: #FFD700; /* Yellow */
-  --header-bg: #f5f5f5;
+  --header-bg: #f2f2f2;
 }
 
 [data-theme="dark"] {
-  --bg-color: #121212;
+  --bg-color: #1a1a1a;
   --text-color: #e0e0e0;
   --accent-color: #FFA500;
   --highlight-color: #FFD700;
-  --header-bg: #1e1e1e;
+  --header-bg: #111111;
 }
 
-/* Global Styles */
+/* Basic Reset */
 * {
   box-sizing: border-box;
 }
-body {
-  margin: 0;
+html, body {
+  margin: 0; 
   padding: 0;
-  font-family: 'Open Sans', sans-serif;
-  background-color: var(--bg-color);
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  background: var(--bg-color);
   color: var(--text-color);
-  line-height: 1.6;
 }
 
-/* Container */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
+/* Utility Classes */
+.is-preload * {
+  transition: none !important;
+}
+
+/* Page Wrapper */
+#page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Header */
-.site-header {
+#header {
   background: var(--header-bg);
-  padding: 20px 0;
-  border-bottom: 1px solid #ccc;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.site-title a {
+#header h1 a {
   text-decoration: none;
   color: var(--accent-color);
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2rem;
+  font-weight: 700;
+  font-size: 1.5rem;
 }
-.site-nav {
-  float: right;
-}
-.site-nav ul {
+#header nav ul {
   list-style: none;
+  display: flex;
   margin: 0;
   padding: 0;
-  display: flex;
 }
-.site-nav ul li {
-  margin-left: 20px;
+#header nav ul li {
+  margin-left: 1rem;
 }
-.site-nav ul li a {
+#header nav ul li a {
   text-decoration: none;
   color: var(--text-color);
   font-weight: 600;
 }
-
-/* Theme Toggle Button */
-.theme-toggle {
-  background: var(--highlight-color);
-  border: none;
-  padding: 8px 12px;
-  cursor: pointer;
-  font-size: 1rem;
-  margin-top: 10px;
+.current-page-item {
+  border-bottom: 2px solid var(--accent-color);
 }
 
-/* Hero Section */
-.hero {
-  background: var(--accent-color);
+/* Banner (Hero) */
+#banner {
+  position: relative;
+  background: var(--accent-color) url("../images/banner.jpg") no-repeat center center;
+  background-size: cover;
+  text-align: center;
+  padding: 6rem 1.5rem;
   color: #fff;
-  padding: 80px 0;
-  text-align: center;
 }
-.hero h2 {
+#banner .inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+#banner h2 {
   font-size: 2.5rem;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
 }
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-}
-
-/* Newsletter Signup */
-.newsletter-signup input[type="email"] {
-  padding: 10px;
-  border: none;
-  width: 300px;
-  max-width: 80%;
-  border-radius: 3px;
-  margin-right: 10px;
-}
-.newsletter-signup button {
-  padding: 10px 20px;
-  background: var(--highlight-color);
-  border: none;
-  cursor: pointer;
-  border-radius: 3px;
-  font-weight: bold;
+#banner p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
 }
 
-/* Features Section */
-.features {
-  padding: 60px 0;
+/* Main Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+/* Box */
+.box {
   background: var(--bg-color);
-  color: var(--text-color);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
-.features h3 {
+.box.special {
   text-align: center;
-  margin-bottom: 40px;
-  font-size: 2rem;
+  background: #f9f9f9;
 }
-.feature-items {
+
+/* Rows (basic responsive) */
+.row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  margin: -1rem 0 0 -1rem;
 }
-.feature-item {
-  flex: 0 1 300px;
-  margin: 10px;
-  padding: 20px;
-  background: #f9f9f9;
-  border-radius: 5px;
-  text-align: center;
-  transition: transform 0.3s ease;
+.row > div {
+  padding: 1rem 0 0 1rem;
 }
-.feature-item:hover {
-  transform: translateY(-5px);
+.col-6 {
+  width: 50%;
 }
-.feature-item h4 {
-  margin-bottom: 10px;
-  color: var(--accent-color);
+.col-12 {
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .col-6, .col-12-medium {
+    width: 100%;
+  }
+}
+
+/* Buttons */
+.button {
+  display: inline-block;
+  background: var(--highlight-color);
+  color: #000;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+.button.primary {
+  background: var(--accent-color);
+  color: #fff;
+}
+.button.small {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+/* Blog Post Items */
+.blog-post {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+}
+.blog-post h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.4rem;
+}
+.blog-post p {
+  margin: 0.5rem 0;
+}
+
+/* Newsletter Signup Form */
+.newsletter-signup {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.newsletter-signup input[type="email"] {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  margin-right: 0;
+  width: 250px;
+  max-width: 100%;
+}
+.newsletter-signup button {
+  border-radius: 0 4px 4px 0;
 }
 
 /* Footer */
-.site-footer {
+#footer {
   background: var(--header-bg);
-  padding: 20px 0;
+  padding: 2rem 1.5rem;
   text-align: center;
-  border-top: 1px solid #ccc;
+  margin-top: auto; /* Pushes footer to bottom if there's not enough content */
+}
+#footer .icons {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  display: inline-flex;
+}
+#footer .icons li {
+  margin: 0 0.5rem;
+}
+#footer .icons a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1.25rem;
+}
+
+/* Dark Mode Adjustments */
+[data-theme="dark"] #banner,
+[data-theme="dark"] .box {
+  background-color: var(--bg-color);
 }
